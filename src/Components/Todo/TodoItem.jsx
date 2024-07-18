@@ -29,7 +29,7 @@ const TodoItem = ({ todo }) => {
       {isEdit ? (
         <form onSubmit={handleSubmit} className="flex-grow">
           <input
-                      type="text"
+            type="text"
             value={editedValue}
             onChange={(e) => setEditedValue(e.target.value)}
             className="border p-1 flex-grow"

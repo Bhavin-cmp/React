@@ -17,6 +17,12 @@ import Todo from "./Components/Todo/Todo.jsx";
 import { Store } from "./Store.js";
 import { Provider } from "react-redux";
 import Practice from "./Components/Practice/Practice.jsx";
+const Data = [
+  { id: "todo-0", name: "Eat", completed: true },
+  { id: "todo-1", name: "Sleep", completed: false },
+  { id: "todo-2", name: "Repeat", completed: false },
+];
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
@@ -24,7 +30,7 @@ const router = createBrowserRouter(
       <Route path="/contact" element={<Contact />} />
       <Route path="/products" element={<Product />} />
       <Route path="/todos" element={<Todo />} />
-      <Route path="/practice" element={<Practice />} />
+      <Route path="/practice" element={<Practice data={Data} />} />
       <Route path="*" element={<ErrorPage />} />
     </Route>
   )
